@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wuthering Waves daily checklist — never miss waveplate, dailies, or event rewards. Track your daily tasks and maximize progress.">
+    <title>WuWa Daily Checklist — Wuthering Waves Daily Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">🌊 WuWa<span class="hl">Tools</span></a>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="codes.html" class="nav-codes">🎁 Codes</a></li>
+                <li><a href="tier-list.html">📊 Tier List</a></li>
+                <li><a href="characters.html">👤 Characters</a></li>
+                <li><a href="weapons.html">⚔️ Weapons</a></li>
+                <li><a href="echoes.html">🔮 Echoes</a></li>
+                <li><a href="daily-checklist.html" class="active">✅ Daily</a></li>
+                <li><a href="events.html">📅 Events</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="section">
+        <div class="ad-banner" style="text-align:center;padding:1rem;background:var(--bg-card);border-radius:var(--radius);margin-bottom:1.5rem;color:var(--text-dim);font-size:0.85rem;">
+            📢 AD SPACE — Google AdSense Banner
+        </div>
+
+        <h1 style="font-size:2rem;margin-bottom:0.3rem;">✅ WuWa <span class="hl">Daily Checklist</span></h1>
+        <p style="color:var(--text-dim);margin-bottom:1.5rem;">Never miss a single Astrite. Reset: <strong>4:00 AM server time</strong>.</p>
+
+        <div class="card" style="margin-bottom:1rem;">
+            <h2 style="margin-bottom:0.8rem;">🌅 Daily Tasks</h2>
+            <div class="checklist" id="daily">
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Daily Commissions</strong> (4x) — 60 Astrite</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Spend 240 Waveplates</strong> — Echo/Mat farming</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Tower of Adversity</strong> — Attempt floors</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Forgery Challenge</strong> — Weapon/Character mats</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Simulation Training</strong> — Skill upgrade mats</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Boss Challenge</strong> — Ascension materials</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Tacet Field</strong> — Echo farming</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Daily Login</strong> — Free rewards</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Redeem codes</strong> — <a href="codes.html" style="color:var(--hl);">Check codes →</a></label>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom:1rem;">
+            <h2 style="margin-bottom:0.8rem;">📅 Weekly Tasks (reset Monday)</h2>
+            <div class="checklist" id="weekly">
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Illusive Realm</strong> — Weekly boss mode</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Weekly Boss (3x)</strong> — Scar / Dreamless / etc.</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Co-op Events</strong> — If active</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Pincer Maneuver</strong> — Endgame challenge</label>
+            </div>
+        </div>
+
+        <div class="ad-banner" style="text-align:center;padding:1rem;background:var(--bg-card);border-radius:var(--radius);margin-bottom:1.5rem;color:var(--text-dim);font-size:0.85rem;">
+            📢 AD SPACE — Google AdSense Banner
+        </div>
+
+        <div class="card">
+            <h2 style="margin-bottom:0.8rem;">📊 Progress Today</h2>
+            <p style="font-size:2rem;font-weight:700;color:var(--hl);" id="progress">0%</p>
+            <div style="background:var(--border);border-radius:10px;height:8px;margin-top:0.5rem;">
+                <div id="progress-bar" style="background:var(--hl);height:100%;border-radius:10px;width:0%;transition:width 0.3s;"></div>
+            </div>
+            <button onclick="resetChecks()" style="margin-top:1rem;background:var(--bg-card);border:1px solid var(--border);color:var(--text);padding:0.4rem 1rem;border-radius:6px;cursor:pointer;">🔄 Reset</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>🌊 <strong>WuWa Tools</strong> — Fan-made. Not affiliated with Kuro Games.</p>
+            <div class="footer-links">
+                <a href="/">Home</a> | <a href="codes.html">Codes</a> | <a href="tier-list.html">Tier List</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function saveChecks() {
+            var checks = document.querySelectorAll('.check-item input');
+            var states = {};
+            checks.forEach(function(c, i) { states[i] = c.checked; });
+            localStorage.setItem('wuwa-daily-checklist', JSON.stringify(states));
+            updateProgress();
+        }
+        function loadChecks() {
+            var data = JSON.parse(localStorage.getItem('wuwa-daily-checklist') || '{}');
+            var checks = document.querySelectorAll('.check-item input');
+            checks.forEach(function(c, i) { if (data[i]) c.checked = true; });
+            updateProgress();
+        }
+        function updateProgress() {
+            var checks = document.querySelectorAll('.check-item input');
+            var checked = Array.from(checks).filter(function(c) { return c.checked; }).length;
+            var pct = Math.round((checked / checks.length) * 100);
+            document.getElementById('progress').textContent = pct + '%';
+            document.getElementById('progress-bar').style.width = pct + '%';
+        }
+        function resetChecks() {
+            document.querySelectorAll('.check-item input').forEach(function(c) { c.checked = false; });
+            localStorage.removeItem('wuwa-daily-checklist');
+            updateProgress();
+        }
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        });
+        loadChecks();
+    </script>
+</body>
+</html>
