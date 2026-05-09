@@ -183,6 +183,11 @@ footer {
 .weapon-card h3 { font-size: 0.95rem; }
 .weapon-card p { color: var(--text-dim); font-size: 0.8rem; margin-top: 0.2rem; }
 
+/* === Echo Sets === */
+.echo-set { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 0.7rem; margin-bottom: 0.4rem; }
+.echo-set h3 { font-size: 0.95rem; margin-bottom: 0.2rem; }
+.echo-set p { color: var(--text-dim); font-size: 0.85rem; }
+
 /* === Responsive === */
 @media (max-width: 768px) {
     .grid-4 { grid-template-columns: repeat(2, 1fr); }
