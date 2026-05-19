@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
     <meta name="description" content="All active Wuthering Waves redemption codes for May 2026. Get free Astrite, pulls, and materials. Updated daily!">
-    <meta property="og:title" content="Wuthering Waves Active Codes (May 2026) â€?Free Astrite & Pulls">
+    <meta property="og:title" content="Wuthering Waves Active Codes (May 2026) ?Free Astrite & Pulls">
     <meta property="og:description" content="All working Wuthering Waves redeem codes. One-click copy, updated daily. No login needed.">
     <meta property="og:url" content="https://wuwatools.online/codes.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://wuwatools.online/codes.html">
-    <title>Wuthering Waves Codes (May 2026) â€?Active Redemption Codes</title>
+    <title>Wuthering Waves Codes (May 2026) ?Active Redemption Codes</title>
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6874021376358424" crossorigin="anonymous"></script>
 </head>
@@ -152,12 +154,35 @@
             document.querySelector('.nav-links').classList.toggle('open');
         });
     </script>
+    <!-- Copy code on click -->
+    <script>
+        document.querySelectorAll('.code-text').forEach(el => {
+            el.style.cursor = 'pointer';
+            el.title = 'Click to copy';
+            el.addEventListener('click', async () => {
+                const code = el.textContent.trim();
+                try {
+                    await navigator.clipboard.writeText(code);
+                    const orig = el.textContent;
+                    el.textContent = 'âœ… Copied!';
+                    el.style.color = '#22c55e';
+                    setTimeout(() => {
+                        el.textContent = orig;
+                        el.style.color = '';
+                    }, 1500);
+                } catch {
+                    el.textContent = 'âš ï¸ Failed';
+                    setTimeout(() => { el.textContent = code; }, 1500);
+                }
+            });
+        });
+    </script>
     <!-- Ko-fi Widget -->
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script>
       kofiWidgetOverlay.draw('wuwatools', {
         'type': 'floating-chat',
-        'floating-chat.donateButton.text': 'Buy me a coffee â˜?,
+        'floating-chat.donateButton.text': 'Buy me a coffee ?,
         'floating-chat.donateButton.background-color': '#d4a843',
         'floating-chat.donateButton.text-color': '#1a1a2e'
       });
