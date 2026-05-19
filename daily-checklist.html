@@ -89,47 +89,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        function saveChecks() {
-            var checks = document.querySelectorAll('.check-item input');
-            var states = {};
-            checks.forEach(function(c, i) { states[i] = c.checked; });
-            localStorage.setItem('wuwa-daily-checklist', JSON.stringify(states));
-            updateProgress();
-        }
-        function loadChecks() {
-            var data = JSON.parse(localStorage.getItem('wuwa-daily-checklist') || '{}');
-            var checks = document.querySelectorAll('.check-item input');
-            checks.forEach(function(c, i) { if (data[i]) c.checked = true; });
-            updateProgress();
-        }
-        function updateProgress() {
-            var checks = document.querySelectorAll('.check-item input');
-            var checked = Array.from(checks).filter(function(c) { return c.checked; }).length;
-            var pct = Math.round((checked / checks.length) * 100);
-            document.getElementById('progress').textContent = pct + '%';
-            document.getElementById('progress-bar').style.width = pct + '%';
-        }
-        function resetChecks() {
-            document.querySelectorAll('.check-item input').forEach(function(c) { c.checked = false; });
-            localStorage.removeItem('wuwa-daily-checklist');
-            updateProgress();
-        }
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('open');
-        });
-        loadChecks();
-    </script>
-    <!-- Ko-fi Widget -->
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-    <script>
-      kofiWidgetOverlay.draw('wuwatools', {
-        'type': 'floating-chat',
-        'floating-chat.donateButton.text': 'Buy me a coffee â˜?,
-        'floating-chat.donateButton.background-color': '#d4a843',
-        'floating-chat.donateButton.text-color': '#1a1a2e'
-      });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
