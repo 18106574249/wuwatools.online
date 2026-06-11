@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-
     <meta name="description" content="Wuthering Waves daily checklist tracker. Never miss daily tasks, waveplates or rewards. Saves locally.">
-    <meta property="og:title" content="Wuthering Waves Daily Checklist - Track Tasks & Waveplates">
-    <meta property="og:description" content="Wuthering Waves daily task tracker with progress bar. Never miss waveplate, dailies or rewards.">
+    <meta property="og:title" content="Wuthering Waves Daily Checklist - Daily Tasks & Waveplate Tracker">
+    <meta property="og:description" content="Wuthering Waves daily checklist tracker. Never miss daily tasks, waveplates or rewards. Saves locally.">
     <meta property="og:url" content="https://wuwatools.online/daily-checklist.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
@@ -19,74 +18,79 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="/" class="logo">ğŸŒŠ WuWa<span class="hl">Tools</span></a>
-            <button class="menu-toggle" aria-label="Toggle menu">â˜?/button>
+            <a href="/" class="logo">WuWa<span class="hl">Tools</span></a>
+            <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="codes.html" class="nav-codes">ğŸ Codes</a></li>
-                <li><a href="tier-list.html">ğŸ“Š Tier List</a></li>
-                <li><a href="characters.html">ğŸ‘¤ Characters</a></li>
-                <li><a href="weapons.html">âš”ï¸ Weapons</a></li>
-                <li><a href="echoes.html">ğŸ”® Echoes</a></li>
-                <li><a href="daily-checklist.html" class="active">âœ?Daily</a></li>
-                <li><a href="events.html">ğŸ“… Events</a></li>
+<li><a href="codes.html">Codes</a></li>
+<li><a href="tier-list.html">Tier List</a></li>
+<li><a href="characters.html">Characters</a></li>
+<li><a href="weapons.html">Weapons</a></li>
+<li><a href="echoes.html">Echoes</a></li>
+<li><a href="daily-checklist.html" class="active">Daily</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="banners.html">Banners</a></li>
             </ul>
         </div>
     </nav>
-
     <main class="section">
-        <div class="ad-banner" style="text-align:center;padding:1rem;background:var(--bg-card);border-radius:var(--radius);margin-bottom:1.5rem;color:var(--text-dim);font-size:0.85rem;">
-            ğŸ“¢ AD SPACE â€?Google AdSense Banner
-        </div>
 
         <h1 style="font-size:2rem;margin-bottom:0.3rem;">WuWa <span class="hl">Daily Checklist</span> - Tasks & Waveplate Tracker</h1>
         <p style="color:var(--text-dim);margin-bottom:1.5rem;">Never miss a single Astrite. Reset: <strong>4:00 AM server time</strong>.</p>
 
+        <div class="card" style="margin-bottom:1.5rem;padding:1.2rem;">
+            <p style="line-height:1.7;">This interactive checklist helps you track daily and weekly tasks in Wuthering Waves. All checkboxes save automatically to your browser's local storage - no account needed, no data collected. Check off tasks as you complete them and they will persist across sessions.</p>
+        </div>
+
         <div class="card" style="margin-bottom:1rem;">
-            <h2 style="margin-bottom:0.8rem;">ğŸŒ… Daily Tasks</h2>
+            <h2 style="margin-bottom:0.8rem;">Daily Tasks</h2>
             <div class="checklist" id="daily">
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Daily Commissions</strong> (4x) â€?60 Astrite</label>
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Spend 240 Waveplates</strong> â€?Echo/Mat farming</label>
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Tower of Adversity</strong> â€?Attempt floors</label>
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Forgery Challenge</strong> â€?Weapon/Character mats</label>
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Simulation Training</strong> â€?Skill upgrade mats</label>
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Boss Challenge</strong> â€?Ascension materials</label>
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Tacet Field</strong> â€?Echo farming</label>
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Daily Login</strong> â€?Free rewards</label>
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Redeem codes</strong> â€?<a href="codes.html" style="color:var(--hl);">Check codes â†?/a></label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Daily Commissions</strong> (4x) - 60 Astrite</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Spend 240 Waveplates</strong> - Echo/Mat farming</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Tower of Adversity</strong> - Attempt floors</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Forgery Challenge</strong> - Weapon/Character mats</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Simulation Training</strong> - Skill upgrade mats</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Boss Challenge</strong> - Ascension materials</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Tacet Field</strong> - Echo farming</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Daily Login</strong> - Free rewards</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()"> <strong>Redeem codes</strong> - <a href="codes.html" style="color:var(--hl);">Check codes here</a></label>
             </div>
         </div>
 
         <div class="card" style="margin-bottom:1rem;">
-            <h2 style="margin-bottom:0.8rem;">ğŸ“… Weekly Tasks (reset Monday)</h2>
+            <h2 style="margin-bottom:0.8rem;">Weekly Tasks (reset Monday)</h2>
             <div class="checklist" id="weekly">
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Illusive Realm</strong> â€?Weekly boss mode</label>
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Weekly Boss (3x)</strong> â€?Scar / Dreamless / etc.</label>
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Co-op Events</strong> â€?If active</label>
-                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Pincer Maneuver</strong> â€?Endgame challenge</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Illusive Realm</strong> - Weekly boss mode</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Weekly Boss (3x)</strong> - Scar / Dreamless / etc.</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Co-op Events</strong> - If active</label>
+                <label class="check-item"><input type="checkbox" onchange="saveChecks()" data-weekly> <strong>Pincer Maneuver</strong> - Endgame challenge</label>
             </div>
         </div>
 
-        <div class="ad-banner" style="text-align:center;padding:1rem;background:var(--bg-card);border-radius:var(--radius);margin-bottom:1.5rem;color:var(--text-dim);font-size:0.85rem;">
-            ğŸ“¢ AD SPACE â€?Google AdSense Banner
+        <div class="card" style="margin-bottom:1rem;">
+            <h2 style="margin-bottom:0.8rem;">Progress</h2>
+            <div class="progress-bar" style="background:var(--bg);border-radius:8px;height:24px;overflow:hidden;margin-bottom:0.5rem;">
+                <div id="progress-fill" style="background:var(--hl);height:100%;width:0%;transition:width 0.3s;"></div>
+            </div>
+            <p id="progress-text" style="text-align:center;color:var(--text-dim);">0/13 tasks completed</p>
         </div>
 
-        <div class="card">
-            <h2 style="margin-bottom:0.8rem;">ğŸ“Š Progress Today</h2>
-            <p style="font-size:2rem;font-weight:700;color:var(--hl);" id="progress">0%</p>
-            <div style="background:var(--border);border-radius:10px;height:8px;margin-top:0.5rem;">
-                <div id="progress-bar" style="background:var(--hl);height:100%;border-radius:10px;width:0%;transition:width 0.3s;"></div>
-            </div>
-            <button onclick="resetChecks()" style="margin-top:1rem;background:var(--bg-card);border:1px solid var(--border);color:var(--text);padding:0.4rem 1rem;border-radius:6px;cursor:pointer;">ğŸ”„ Reset</button>
+        <div class="card" style="margin-top:2rem;padding:1.2rem;background:rgba(212,168,67,0.08);border:1px solid var(--hl);">
+            <h3 style="color:var(--hl);">Daily Routine Tips</h3>
+            <ul style="line-height:1.8;padding-left:1.2rem;">
+                <li><strong>Do commissions first</strong> - they take 5 minutes and give 60 Astrite guaranteed.</li>
+                <li><strong>Spend waveplates on what you need most</strong> - echoes for builds, forgery for weapon mats, bosses for ascension.</li>
+                <li><strong>Tower of Adversity resets every 2 weeks</strong> - check it daily but don't stress if you can't clear all floors.</li>
+                <li><strong>Weekly bosses reset Monday 4:00 AM</strong> - plan your 3 weekly clears around your schedule.</li>
+                <li><strong>Save waveplates before new patches</strong> - new characters often need new boss materials.</li>
+            </ul>
         </div>
+
     </main>
-
     <footer>
         <div class="footer-content">
-            <p>ğŸŒŠ <strong>WuWa Tools</strong> â€?Fan-made. Not affiliated with Kuro Games.</p>
-            <div class="footer-links">
-                <a href="/">Home</a> | <a href="codes.html">Codes</a> | <a href="tier-list.html">Tier List</a>
-            </div>
+            <p><strong>WuWa Tools</strong> - Fan-made. Not affiliated with Kuro Games.</p>
+            <div class="footer-links"><a href="/">Home</a> | <a href="codes.html">Codes</a> | <a href="tier-list.html">Tier List</a></div>
         </div>
     </footer>
     <script src="main.js"></script>
