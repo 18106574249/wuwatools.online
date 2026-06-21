@@ -1,13 +1,15 @@
 {
   "instances": {
-    "default@100.76.207.79": {
-      "host": "100.76.207.79",
-      "api_port": 19090,
+    "default@100.101.69.31": {
+      "host": "100.101.69.31",
+      "api_port": 8089,
       "listening": true,
       "capabilities": [
-        "cognee"
+        "cognee",
+        "vision",
+        "computer_use"
       ],
-      "last_updated": "2026-06-21T10:28:22Z"
+      "last_updated": "2026-06-21T10:29:08Z"
     }
   }
 }
