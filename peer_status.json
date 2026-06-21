@@ -9,7 +9,16 @@
         "vision",
         "computer_use"
       ],
-      "last_updated": "2026-06-21T10:29:08Z"
+      "last_updated": "2026-06-22T10:30:00Z"
+    },
+    "default@100.76.207.79": {
+      "host": "100.76.207.79",
+      "api_port": 19090,
+      "listening": true,
+      "capabilities": [
+        "cognee"
+      ],
+      "last_updated": "2026-06-22T10:30:00Z"
     }
   }
 }
