@@ -20,5 +20,14 @@
       ],
       "last_updated": "2026-06-22T10:30:00Z"
     }
+  },
+  "100.100.100.100": {
+    "hostname": "WIN-DMTP2PUQ8HG",
+    "port": 19090,
+    "capabilities": [
+      "cognee"
+    ],
+    "last_seen": "2026-06-21T11:05:27.671601+00:00",
+    "online": true
   }
 }
