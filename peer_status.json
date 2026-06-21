@@ -29,5 +29,14 @@
     ],
     "last_seen": "2026-06-21T11:05:27.671601+00:00",
     "online": true
+  },
+  "100.76.207.79": {
+    "hostname": "WIN-DMTP2PUQ8HG",
+    "port": 19090,
+    "capabilities": [
+      "cognee"
+    ],
+    "last_seen": "2026-06-21T11:05:39.611882+00:00",
+    "online": true
   }
 }
