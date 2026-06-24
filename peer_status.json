@@ -14,11 +14,11 @@
     "default@100.76.207.79": {
       "host": "100.76.207.79",
       "api_port": 19090,
-      "listening": true,
+      "listening": false,
       "capabilities": [
         "cognee"
       ],
-      "last_updated": "2026-06-22T08:08:26Z"
+      "last_updated": "2026-06-24T00:25:30Z"
     }
   },
   "100.100.100.100": {
