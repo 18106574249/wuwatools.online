@@ -12,11 +12,13 @@
       "last_updated": "2026-06-21T10:39:34Z"
     },
     "default@100.76.207.79": {
-      "host": "100.76.207.31",
+      "host": "100.76.207.79",
       "api_port": 19090,
       "listening": true,
-      "capabilities": [],
-      "last_updated": "2026-06-28T12:45:49Z"
+      "capabilities": [
+        "cognee"
+      ],
+      "last_updated": "2026-06-28T13:26:42Z"
     }
   },
   "100.100.100.100": {
